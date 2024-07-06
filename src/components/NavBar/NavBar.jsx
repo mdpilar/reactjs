@@ -1,6 +1,7 @@
-import logoCyberLuv from "../../assets/logo.png"
+import logoCyberLuv from "../../assets/logo.jpg"
 import CartWidget from "./CartWidget"
 import "./NavBar.css"
+import { Link } from "react-router-dom"
 const NavBar = () => {
     return (
         <><nav>
@@ -9,13 +10,14 @@ const NavBar = () => {
             </div>
 
             <ul>
-                <li>Shop</li>
-                <li>Men</li>
-                <li>Women</li>
-                <li>About</li>
+                <Link to="/">Home</Link>
+                <Link to="/categoria/dresses">Dresses</Link>
+                <Link to="/categoria/tops"> Tops</Link>
+                <Link to="/categoria/bottoms">Bottoms</Link>
             </ul>
             <CartWidget />
         </nav></>
+        
     ) 
 }
 
