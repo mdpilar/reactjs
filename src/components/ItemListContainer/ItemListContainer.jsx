@@ -37,6 +37,7 @@ const ItemListContainer = ({ saludo }) => {
         <div> 
             <h2>{saludo}</h2>
             <ItemList productos = {productos} />
+            
         </div>
     );        
 };

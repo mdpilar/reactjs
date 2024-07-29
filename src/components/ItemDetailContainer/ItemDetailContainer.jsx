@@ -11,11 +11,9 @@ import { obtenerProductos } from "../../data/data.js"
             }) 
 
         }, [])
-    return (
-        <div>
-            <h2>{producto.nombre}</h2>
-            <img src={producto.imagen} alt="" />
-        </div>
-    )
+        return (
+            <ItemDetail producto={producto} />
+        )
+
 }
 export default ItemDetailContainer 

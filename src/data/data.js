@@ -1,3 +1,5 @@
+import "./data.css"
+
 const productos = [
     {
         id: "Azz123",
@@ -78,15 +80,6 @@ const productos = [
         stock: 505,
         categoria: "dresses",
         imagen: "/img/dressblue.jpeg",
-        precio: 45.00
-    },
-    {
-        id: "Azz666",
-        nombre: "Producto 3",
-        descripcion: "Descripcion 3",
-        stock: 505,
-        categoria: "dresses",
-        imagen: "img/dresswhite.jpeg",
         precio: 45.00
     },
     {
