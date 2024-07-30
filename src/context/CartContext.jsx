@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
 
-//Creamos un contexto de React llamado CartContext
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
@@ -10,7 +9,7 @@ const CartProvider = ({ children }) => {
     const condicion = estaEnElCarrito(producto.id);
 
     if (condicion) {
-      //sumar la cantidad nueva
+    
     const productosModificados = carrito.map((productoCarrito) => {
         if (productoCarrito.id === producto.id) {
             return { ...productoCarrito, cantidad: productoCarrito.cantidad + producto.cantidad };
@@ -21,7 +20,7 @@ const CartProvider = ({ children }) => {
 
       setCarrito(productosModificados);
     } else {
-      //agregar como producto nuevo
+    
       setCarrito([...carrito, producto]);
     }
   };

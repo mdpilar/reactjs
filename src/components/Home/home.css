@@ -3,11 +3,11 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden; /* Asegura que no haya barras de desplazamiento */
+    overflow: hidden;
 }
 
 .inicio-image {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    object-fit: cover;
 }

@@ -1,22 +1,36 @@
-import './App.css'
-import NavBar from "./components/NavBar/NavBar.jsx"
-import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx'
-import {BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from './components/Home/home.jsx'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import Error from "./components/Ejemplos/Error";
+import { CartProvider } from "./context/CartContext";
+import Carrito from "./components/Carrito/Carrito"
+import Checkout from "./components/checkout/Checkout";
+
+import "./App.css";
+
+
 function App() {
-  
   return (
     <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/"  element={< Home />} />
-        <Route path="/categoria/:idCategoria"  element={<ItemListContainer />} />
+      <CartProvider>
+        <NavBar />
+        
 
-      </Routes>
-    
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/categoria/:idCategoria" element={<ItemListContainer />} />
+          <Route path="/detalle/:idProducto" element={<ItemDetailContainer />} />
+          <Route path="/carrito" element={<Carrito />} />
+          <Route path="/checkout" element={<Checkout />} />
+
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </CartProvider>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

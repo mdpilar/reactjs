@@ -31,23 +31,16 @@ nav ul li:hover {
 }
 
 
-.cart-widget {
-    position: relative;
-    cursor: pointer; 
+.cartwidget {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
-.cart-widget::after {
-    content: "3"; 
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: #EC297B;
-    color: white;
-    border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 12px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cartwidget p{
+    padding: 0 10px;
+    font-size: 20px;
 }
